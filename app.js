@@ -16,7 +16,7 @@ const client = new pg.Client({
     ssl: true
 });
 client.connect();
-app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572697/735306480197164/?type=3&theater',function(req,res){
+app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572697/735306480197164',function(req,res){
     res.render('Facebook');
     
 })
