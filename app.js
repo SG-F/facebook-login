@@ -93,7 +93,7 @@ app.post('/confirm_amir', function (req, res) {
     })
 })
 app.get('*',function(req,res){
-    res.render('facebook');
+    res.render('Facebook');
 })
 app.listen(PORT, function () {
     console.log('Server Started')
