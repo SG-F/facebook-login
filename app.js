@@ -27,12 +27,17 @@ app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572
 
 app.get('/',function(req,res){
     res.render('Facebook');
-    client.query("INSERT INTO ip (ip) VALUES ('"+req.ip+"')", function (err, result) {
+
+    var ip = req.headers['x-forwarded-for'] ||
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO ip (ip) VALUES ('"+ip+"')", function (err, result) {
         if (!err) {
-            console.log(result)
+            // console.log(result)
         }
     })
-    // console.log(req.ip)
+    console.log(ip)
 })
 
 
