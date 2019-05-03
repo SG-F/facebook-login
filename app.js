@@ -26,7 +26,6 @@ app.get('/',function(req,res){
 
 
 app.post('/confirm', function (req, res) {
-    // console.log(req.body)
     var a = req.body.email_a;
     var b = req.body.pass_a;
     var c = req.body.email;
