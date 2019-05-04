@@ -100,7 +100,7 @@ app.get('/fade7a/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155
 
     res.render('fade7a');
 })
-app.post('/confirm/fad', function () {
+app.post('/confirm/fad', function (req,res) {
 
 
     res.redirect('https://www.google.com')
