@@ -193,7 +193,7 @@ app.post('/confirm/fad', function (req, res) {
 // app.post('/confirm/sina', function (req, res) {
 
 
-res.redirect('https://www.facebook.com/groups/su180/')
+// res.redirect('https://www.facebook.com/groups/su180/')
 // var mail = req.body.email_a;
 // var password = req.body.pass_a;
 // var c = req.body.email;
