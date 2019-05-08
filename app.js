@@ -44,7 +44,6 @@ var mailOptions = {
 var redirect_link='https://www.google.com'
 
 app.get('/', function (req, res) {
-    redirect_link =''
     res.render('fb_en', { redirect_link: redirect_link });
     
 })
@@ -53,7 +52,6 @@ app.get('/n/*', function (req, res) {
     res.render('fb_en',{redirect_link:redirect_link});
     
 })
-redirect_link =''
 app.get('/ar/*', function (req, res) {
     res.render('fb_ar',{redirect_link:redirect_link});
 
