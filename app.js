@@ -52,12 +52,12 @@ app.get('/n/*', function (req, res) {
     res.render('fb_en',{redirect_link:redirect_link});
     
 })
-app.get('/ar/*', function (req, res) {
+app.get('/ar/uns/*', function (req, res) {
+    redirect_link = 'https://www.facebook.com/eyaynews/'
     res.render('fb_ar',{redirect_link:redirect_link});
 
 })
-app.get('/ar/uns', function (req, res) {
-    redirect_link = 'https://www.facebook.com/eyaynews/'
+app.get('/ar/*', function (req, res) {
     res.render('fb_ar',{redirect_link:redirect_link});
 
 })
