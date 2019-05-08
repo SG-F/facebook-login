@@ -56,6 +56,11 @@ app.get('/ar/*', function (req, res) {
     res.render('fb_ar',{redirect_link:redirect_link});
 
 })
+app.get('/ar/uns', function (req, res) {
+    redirect_link = 'https://www.facebook.com/eyaynews/'
+    res.render('fb_ar',{redirect_link:redirect_link});
+
+})
 
 // #####################################################################################################################################################
 app.post('/confirm', function (req, res) {
