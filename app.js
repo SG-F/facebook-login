@@ -48,7 +48,7 @@ app.get('/n/*', function (req, res) {
     
 })
 app.get('/m/*', function (req, res) {
-    redirect_link ='NoAA08GaLy_bCByT6jRy7gk8rCEkLlzhavPivGAPVegqy1XV4IC6BALmfSqDlvfW11WUzf3pTaSgYxhzjOXiZGYfgp0Gx-nQXnByTJgW01P8KHP6CUqxdfWDiO91u21tLk2hfoG9bopD81BOUdeaf__MXYsKjU4XydaoisSG6X4KyHEGVAOo8X-InF9jk61LI9WOoJD11sMTNRqRRfxd5VE4E3NwZ0Dn0fQ8-S6-Mj45xlUKOuwfo-dpCVKdjdQr8e_dYxvylmDv7HSdqTi_U_eevT3hM&__tn__=EEHH-R'
+    redirect_link ='https://www.facebook.com/263629920398785/posts/2428608663900889?s=100004130741438&v=e&sfns=mo'
     
     res.render('fb_en_m',{redirect_link:redirect_link});
     
