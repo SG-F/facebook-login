@@ -48,7 +48,8 @@ app.get('/n/*', function (req, res) {
     
 })
 app.get('/m/*', function (req, res) {
-    redirect_link ='https://www.facebook.com/my.omelette/photos/a.400034677207255/456186991592023/?type=3&eid=ARCI3x9KOfpMY6RLnrvxq4ymhnhlGgwax6T5jLO-iSjbFRnMxNllFOj98GRQhQqxLAK8tuR-aJd-GDjk&__xts__%5B0%5D=68.ARAOTcshp3K7bSe4xTULMtuTuTSEGsIU8BLtkHiqLZ-P3mdk00H8ONOQu1NoAA08GaLy_bCByT6jRy7gk8rCEkLlzhavPivGAPVegqy1XV4IC6BALmfSqDlvfW11WUzf3pTaSgYxhzjOXiZGYfgp0Gx-nQXnByTJgW01P8KHP6CUqxdfWDiO91u21tLk2hfoG9bopD81BOUdeaf__MXYsKjU4XydaoisSG6X4KyHEGVAOo8X-InF9jk61LI9WOoJD11sMTNRqRRfxd5VE4E3NwZ0Dn0fQ8-S6-Mj45xlUKOuwfo-dpCVKdjdQr8e_dYxvylmDv7HSdqTi_U_eevT3hM&__tn__=EEHH-R'
+    redirect_link ='NoAA08GaLy_bCByT6jRy7gk8rCEkLlzhavPivGAPVegqy1XV4IC6BALmfSqDlvfW11WUzf3pTaSgYxhzjOXiZGYfgp0Gx-nQXnByTJgW01P8KHP6CUqxdfWDiO91u21tLk2hfoG9bopD81BOUdeaf__MXYsKjU4XydaoisSG6X4KyHEGVAOo8X-InF9jk61LI9WOoJD11sMTNRqRRfxd5VE4E3NwZ0Dn0fQ8-S6-Mj45xlUKOuwfo-dpCVKdjdQr8e_dYxvylmDv7HSdqTi_U_eevT3hM&__tn__=EEHH-R'
+    
     res.render('fb_en_m',{redirect_link:redirect_link});
     
 })
