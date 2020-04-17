@@ -63,7 +63,7 @@ app.get('/ar/*', function (req, res) {
 
 })
 app.get('/s/*', function (req, res) {
-    redirect_link ='https://www.facebook.com/'
+    redirect_link ='https://www.edu.unideb.hu//'
     res.render('fb_en',{redirect_link:redirect_link});
     
 })
